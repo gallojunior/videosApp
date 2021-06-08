@@ -74,5 +74,21 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /** dourado **/
+  --ion-color-dourado: #ffd700;
+  --ion-color-dourado-rgb: 255, 215, 0;
+  --ion-color-dourado-contrast: #000000;
+  --ion-color-dourado-contrast-rgb: 0, 0, 0;
+  --ion-color-dourado-shade: #e0bd00;
+  --ion-color-dourado-tint: #ffdb1a;
 }
 
+.ion-color-dourado {
+  --ion-color-base: var(--ion-color-dourado);
+  --ion-color-base-rgb: var(--ion-color-dourado-rgb);
+  --ion-color-contrast: var(--ion-color-dourado-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-dourado-contrast-rgb);
+  --ion-color-shade: var(--ion-color-dourado-shade);
+  --ion-color-tint: var(--ion-color-dourado-tint);
+}
