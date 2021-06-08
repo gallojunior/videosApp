@@ -10,7 +10,7 @@
   <ion-list color="dark">
 
     <ion-item-sliding *ngFor="let filme of listaFilmes">
-      <ion-item lines="full" color="dark">
+      <ion-item lines="full" color="dark" (click)="exibirFilme(filme)">
         <ion-thumbnail slot="start">
           <img [src]="filme.cartaz" [alt]="filme.nome" />
         </ion-thumbnail>
