@@ -6,5 +6,24 @@
 
 <ion-content [fullscreen]="true" color="dark">
   <!-- Default Searchbar -->
-  <ion-searchbar placeholder="Buscar" color="light"></ion-searchbar>
+  <ion-searchbar placeholder="Buscar" color="dark"></ion-searchbar>
+
+  <!-- List of Text Items -->
+  <ion-list color="dark">
+    <ion-item lines="full" color="dark">
+      <ion-thumbnail slot="start">
+        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kn72J6BFcN71VYOl8sTVeo7x9ph.jpg">
+      </ion-thumbnail>
+      <ion-label class="ion-text-wrap">
+        <div>
+          <h1>Army of the Dead (2021)</h1>
+          <p>14/05/2021 (US) - 2h28</p>
+          <p>Ação, Terror, Thriller, Crime</p>
+        </div>
+      </ion-label>
+      <ion-chip color="warning" outline>
+        <ion-label>66%</ion-label>
+      </ion-chip>
+    </ion-item>
+  </ion-list>
 </ion-content>
