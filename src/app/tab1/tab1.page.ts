@@ -1,3 +1,4 @@
+import { IFilme } from '../models/IFilme.model';
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
@@ -9,6 +10,27 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+
+  titulo = 'Vídeos App';
+
+  listaFilmes: IFilme[] = [
+    {
+      nome: 'Army of the Dead (2021)',
+      lancamento: '14/05/2021',
+      duracao: '2h28',
+      classificacao: 66,
+      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kn72J6BFcN71VYOl8sTVeo7x9ph.jpg',
+      generos: ['Ação', 'Terror', 'Thriller', 'Crime']
+    },
+    {
+      nome: 'Godzilla vs. Kong (2021)',
+      lancamento: '01/04/2021',
+      duracao: '1h53',
+      classificacao: 81,
+      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wllzjZxg4ynlAm5xmOICJ2uHOPJ.jpg',
+      generos: ['Ação', 'Aventura', 'Ficção científica']
+    }
+  ];
 
   constructor(public alertController: AlertController, public toastController: ToastController) {}
 
