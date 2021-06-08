@@ -1,5 +1,4 @@
 ion-item {
-
   --padding-inline-start: 10px;
   --inner-padding-end: 10px;
 
@@ -24,4 +23,9 @@ ion-item {
   ion-chip{
     padding-inline: 3px;
   }
+}
+
+.list-md{
+  padding-top: 0;
+  padding-bottom: 0;
 }
