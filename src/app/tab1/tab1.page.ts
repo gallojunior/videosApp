@@ -1,3 +1,5 @@
+import { IListaFilmes, IFilmeApi } from './../models/IFilmeAPI.model';
+import { FilmeService } from './../services/filme.service';
 import { DadosService } from './../services/dados.service';
 import { IFilme } from '../models/IFilme.model';
 import { Component } from '@angular/core';
@@ -11,9 +13,9 @@ import { Router } from '@angular/router';
   styleUrls: ['tab1.page.scss'],
 })
 export class Tab1Page {
-  titulo = 'Vídeos App';
+  titulo = 'Filmes';
 
-  listaFilmes: IFilme[] = [
+  listaVideos: IFilme[] = [
     {
       nome: 'Army of the Dead (2021)',
       lancamento: '14/05/2021',
@@ -68,14 +70,26 @@ export class Tab1Page {
     }
   ];
 
+  listaFilmes: IListaFilmes;
+
   constructor(
     public alertController: AlertController,
     public toastController: ToastController,
     public dadosService: DadosService,
+    public filmeService: FilmeService,
     public route: Router
   ) {}
 
-  exibirFilme(filme: IFilme) {
+  buscarFilmes(evento: any){
+    console.log(evento.target.value);
+    const busca = evento.target.value;
+    if (busca && busca.trim() !== '')
+    {
+      this.filmeService.buscarFilmes(busca).subscribe(dados =>{this.listaFilmes = dados;});
+    }
+  }
+
+  exibirFilme(filme: IFilmeApi) {
     this.dadosService.guardarDados('filme', filme);
     this.route.navigateByUrl('/dados-filme');
   }
